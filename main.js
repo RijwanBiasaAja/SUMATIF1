@@ -28,7 +28,7 @@ const basisdata = getFirestore(aplikasi)
 
 export async function ambilDataPelanggan() {
   const refDokumen = collection(basisdata, "pelanggan");
-  const kueri = query(refDokumen, orderBy("nama pelanggan"));
+  const kueri = query(refDokumen, orderBy("nama"));
   const cuplikankueri = await getDocs(kueri);
   
   let hasilkueri = [];
