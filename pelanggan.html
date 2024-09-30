@@ -15,22 +15,22 @@
   
   <form class="mb-3">
     <div class="mb-3">
-      <label class="form-label">Nama Pelanggan</label>
-      <input type="text" class="form-control" id="inputnotlpon">
+      <label class="form-label">nama</label>
+      <input type="text" class="form-control" id="inputnama">
     </div>
     <div class="mb-3"></div>
-     <label class="form-label">No Tlpon</label>
-     <input type="text" class="form-control" id="inputalamat">
+     <label class="form-label">tlpon</label>
+     <input type="text" class="form-control" id="inputtlpon">
      <div class="mb-3">
        
      </div>
      <button class="btn btn-primary" id="tombolsimpan">simpan</button>
   </form>
   
-  <a href="index.html">Kembali ke daftar pelanggan</a>
+  <a href="index.html">Kembali ke Data pelanggan</a>
   
   <script type="module">
-    import { tambahPelanggan } from "./main.js";
+    import { tambahDataPelanggan } from "./main.js";
     
     $(document).ready(async function() {
       // ambil data dari formulir
@@ -40,9 +40,9 @@
         event.preventDefault()
         
         let nama = $("#inputnama").val()
-      let notlpon = $("#inputnotlpon").val()
+      let tlpon = $("#inputtlpon").val()
         
-        await tambahPelanggan(nama,notlpon)
+        await tambahDataPelanggan(nama,tlpon)
         window.location.href ="index.html"
       })
    })

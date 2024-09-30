@@ -26,7 +26,7 @@ const firebaseConfig = {
 const aplikasi = initializeApp(firebaseConfig)
 const basisdata = getFirestore(aplikasi)
 
-export async function ambilDaftarPelanggan() {
+export async function ambilDataPelanggan() {
   const refDokumen = collection(basisdata, "pelanggan");
   const kueri = query(refDokumen, orderBy("nama pelanggan"));
   const cuplikankueri = await getDocs(kueri);
